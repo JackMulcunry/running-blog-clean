@@ -5,7 +5,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import { useRoutes } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import routes from "tempo-routes";
 import HomePage from "./components/HomePage";
 import "./App.css";
