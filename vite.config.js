@@ -1,13 +1,7 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import { tempo } from "tempo-devtools/dist/vite";
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), tempo()],
-  base: "/running-blog/",
-  server: {
-    // @ts-ignore
-    allowedHosts: process.env.TEMPO === "true" ? true : undefined,
-  },
-});
+  base: '/running-blog-clean/',
+  plugins: [react()],
+})
