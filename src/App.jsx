@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import routes from "tempo-routes";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import "./App.css";
 
