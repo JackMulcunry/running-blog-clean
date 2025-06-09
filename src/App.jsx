@@ -32,7 +32,7 @@ function App() {
   };
 
   return (
-    <Router basename="/running-blog">
+    <Router basename="/running-blog-clean">
       <AppRoutes />
     </Router>
   );

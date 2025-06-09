@@ -9,6 +9,18 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <script src="https://api.tempo.new/proxy-asset?url=https://storage.googleapis.com/tempo-public-assets/error-handling.js"></script>
+    <!-- Tempo error handling script only in development -->
+    <script>
+      if (
+        window.location.hostname === "localhost" ||
+        window.location.hostname === "127.0.0.1" ||
+        window.location.hostname.includes("tempo-dev.app")
+      ) {
+        const script = document.createElement("script");
+        script.src =
+          "https://api.tempo.new/proxy-asset?url=https://storage.googleapis.com/tempo-public-assets/error-handling.js";
+        document.body.appendChild(script);
+      }
+    </script>
   </body>
 </html>
