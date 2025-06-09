@@ -11,16 +11,11 @@ import HomePage from "./components/HomePage";
 import "./App.css";
 
 function App() {
-  // Create a component to handle routes inside Router context
-  const AppRoutes = () => {
-    // Tempo routes
-    const tempoRoutes = import.meta.env.VITE_TEMPO ? useRoutes(routes) : null;
+  return (
+    <Router basename="/running-blog">
+      {/* Tempo routes */}
+      {import.meta.env.VITE_TEMPO && useRoutes(routes)}
 
-    if (tempoRoutes) {
-      return tempoRoutes;
-    }
-
-    return (
       <Routes>
         {/* Add this before any catchall route */}
         {import.meta.env.VITE_TEMPO && <Route path="/tempobook/*" />}
@@ -28,12 +23,6 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
-    );
-  };
-
-  return (
-    <Router basename="/running-blog-clean">
-      <AppRoutes />
     </Router>
   );
 }
