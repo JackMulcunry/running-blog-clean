@@ -3,13 +3,15 @@ import './App.css';
 
 const App = () => {
   return (
-    <main style={{ padding: '2rem', fontFamily: 'sans-serif', color: '#fff' }}>
-      <h1 style={{ color: '#00FF66' }}>My Running Log</h1>
-      <h2 style={{ color: '#aaa' }}>Tracking daily performance and progress</h2>
+    <div className="App">
+      <header className="App-header">
+        <h1 className="App-title">My Running Log</h1>
+        <h2 className="App-subtitle">Tracking daily performance and progress</h2>
+      </header>
       <div id="blog-posts" style={{ marginTop: '2rem' }}>
         {/* n8n will inject posts here */}
       </div>
-    </main>
+    </div>
   );
 };
 
